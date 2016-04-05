@@ -9,14 +9,16 @@
 </head>
 <body ng-controller="mainController">
 
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row">
-			<div class="col-sm-12" ng-repeat="tweet in data">
+			<div class="col-sm-12 " ng-repeat="tweet in data" id="rel">
 				<!-- {{tweet.text}} -- {{tweet.user.name}} -- {{tweet.sinceTweeted}} seconds ago -->
 				<!-- <div class="col-sm-4 col-sm-offset-4" id="transparent">s</div> -->
-				<div class="col-sm-8 col-sm-offset-2 text-center" id="textAndName">{{tweet.text}} -- {{tweet.user.name}}</div>
-				<div class="col-sm-8 col-sm-offset-2 text-center" id="textAndName">{{tweet.sinceTweeted}} seconds ago</div>
-				<img class="col-sm-12"ng-src="{{tweet.user.profile_banner_url}}" id="bgImages"/>
+				<div class="col-sm-8 col-sm-offset-2 " id="txtWrapper1">
+					<div class="col-sm-8 col-sm-offset-2  text-center" id="textAndName">{{tweet.text}} -- {{tweet.user.name}} -- {{tweet.sinceTweeted}} seconds ago</div>
+				</div>
+				<div class="col-sm-12" id="rope"></div>
+				<img class="col-sm-8 col-sm-offset-2 " ng-src="{{tweet.user.profile_banner_url}}" id="bgImages"/>
 			</div>
 		</div>
 	</div>
