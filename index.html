@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="tweetApp">
+<head>
+	<title>Tweet App</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<!-- adding my css after the bootstrap reset -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body ng-controller="mainController">
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12" ng-repeat="tweet in data">
+				<!-- {{tweet.text}} -- {{tweet.user.name}} -- {{tweet.sinceTweeted}} seconds ago -->
+				<!-- <div class="col-sm-4 col-sm-offset-4" id="transparent">s</div> -->
+				<div class="col-sm-8 col-sm-offset-2 text-center" id="textAndName">{{tweet.text}} -- {{tweet.user.name}}</div>
+				<div class="col-sm-8 col-sm-offset-2 text-center" id="textAndName">{{tweet.sinceTweeted}} seconds ago</div>
+				<img class="col-sm-12"ng-src="{{tweet.user.profile_banner_url}}" id="bgImages"/>
+			</div>
+		</div>
+	</div>
+
+<!-- addig Jquery before bootstrap js -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<!-- Adding AngularJS -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+<!-- Adding my own script tag -->
+<script type="text/javascript" src="js/angularroutes.js"></script>
+<script type="text/javascript" src="js/script.js"/></script>
+</body>
+</html>

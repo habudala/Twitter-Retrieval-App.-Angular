@@ -1,0 +1,12 @@
+body {margin:0px 0px 0px 0px;
+	  padding:0px;}
+
+
+#bgImages {background-size:cover;
+		   height:250px;
+		   z-index: 0;
+		   position:relative;
+		}
+
+
+#textAndName {text-align:center;}
